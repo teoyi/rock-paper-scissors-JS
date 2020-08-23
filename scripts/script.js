@@ -35,6 +35,8 @@ function game() {
         // Setting variables of player's and computer's hand
         let playerSelection = prompt("What hand would you like to play?");
         let computerSelection = computerPlay();
+
+        //Displaying results 
         console.log(playRound(playerSelection, computerSelection))
     }
 }
