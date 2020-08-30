@@ -6,14 +6,15 @@ body{
     margin: 0;
 }
 .hands {
-    display: block;
+    display: inline-block;
     position: absolute;
     bottom: 0;
     text-align: center;
     padding-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 100%
+    width: 90%
+    
 }
 
 button {
