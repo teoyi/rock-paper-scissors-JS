@@ -3,37 +3,38 @@
     <head>
         <title>Rock, Paper, Scissors, Shoot!</title>
         <link rel="stylesheet" type="text/css" href="styles/style.css">
-        <script type="text/javascript" src="scripts/script2.js"></script>
     </head>
     <body>
-        <div class="head">
-            <h1>Rock, Paper, Scissors, Shoot!</h1> 
-        </div>
-        <div class="contain">
-            <div class="user">
-                <div class="player">
-                    <h2>Player</h2>
+        <div class="overhead">
+             <div class="head">
+                <h1>Rock, Paper, Scissors, Shoot!</h1> 
+            </div>
+            <div class="contain">
+                <div class="user">
+                    <div class="player">
+                        <h2>Player</h2>
+                    </div>
+                    <div class="score">
+                        <script type="text/javascript">document.write(pscore)</script>
+                    </div>
                 </div>
-                <div class="score">
-                    <script type="text/javascript">document.write(pscore)</script>
+                <div class="sep">:</div>
+                <div class="computer">
+                    <div class="com">
+                        <h2>Computer</h2>
+                    </div>
+                    <div class="score">
+                        <script type="text/javascript">document.write(cscore)</script>
+                    </div>
                 </div>
             </div>
-            <div class="sep">:</div>
-            <div class="computer">
-                <div class="com">
-                    <h2>Computer</h2>
-                </div>
-                <div class="score">
-                    <script type="text/javascript">document.write(cscore)</script>
-                </div>
+            <div class="results">RESULTS HERE</div>
+            <div class="hands">
+                <button type="button" class="rock" id="rock"></button>
+                <button type="button" class="paper" id="paper"></button>
+                <button type="button" class="scissors" id="scissors"></button>
             </div>
         </div>
-        <div class="hands">
-            <button type="button" class="rock" id="rock"></button>
-            <button type="button" class="paper" id="paper"></button>
-            <button type="button" class="scissors" id="scissors"></button>
-        </div>
-    
-        
+        <script type="text/javascript" src="scripts/script2.js"></script>
     </body>
 </html>

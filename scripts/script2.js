@@ -16,7 +16,7 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) { 
     
     if (playerSelection === computerSelection) {
-        return "It's a Tie!";
+        return result = "It's a Tie!";
 
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         return "You Lose! Paper beats Rock!";
@@ -41,8 +41,8 @@ function playRound(playerSelection, computerSelection) {
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-        console.log('nope');
+    button.addEventListener("click", () => {
+        alert(button.id);
     });
 });
 
