@@ -39,28 +39,25 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', (e) => {
+        console.log('nope');
+    })
+})
+
 // // Actual Game 
 // function game() {
 //     //for (let step = 0; step < 5; step++){
 
 //         // Setting variables of player's and computer's hand
 //         let computerSelection = computerPlay();
-//         let playerSelection = prompt("What hand would you like to play?");
-//         playerSelection = playerSelection.toLowerCase();
-
-//         let valid = false;
-//         while (!valid) {
-//             if (playerSelection == "rock" || playerSelection == "paper" || playerSelection == "scissors") {
-//                 valid = true; 
-//             } else {
-//                 playerSelection = prompt("Sorry, that is not an option! Please choose from rock, paper or scissors!");
-//             }
-//         }
-//         console.log(playerSelection);
-//         //Displaying results 
-//         console.log(playRound(playerSelection, computerSelection));
-//     //}
+//         let buttons = document.querySelectorAll('button');
+//         buttons.forEach((button) => {
+//             button.addEventListener('click', () => {
+//                 alert(button.id);
+//             })
+//         })
 // }
 
 // game();
-

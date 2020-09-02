@@ -44,10 +44,6 @@ body{
     font-size: 130px;
 }
 
-.container {
-    margin: 0;
-}
-
 .hands {
     display: inline-block;
     position: absolute;
@@ -56,17 +52,19 @@ body{
     padding-bottom: 50px;
     margin-left: auto;
     margin-right: auto;
-    width: 90%
-    
+    width: 90%;
+
+
 }
 
 button {
     width: 150px;
     height: 180px;
-    border: 0;
+    border: 1;
     border-radius: 12px;
     background-color: rgb(253, 253, 253);
     margin-left: 70px;
+    z-index: 100;
  
 }
 
