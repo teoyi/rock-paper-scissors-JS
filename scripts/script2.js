@@ -36,15 +36,15 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         alert ("You Lose! Scissors beats paper!")
         return cscore+1
-    }
-}
+    };
+};
 
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', (e) => {
         console.log('nope');
-    })
-})
+    });
+});
 
 // // Actual Game 
 // function game() {
