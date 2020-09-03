@@ -1,10 +1,6 @@
 // Backend for rock paper scissors game
 /////////////////////////////////////////
 
-// Scores for user and computer
-let pscore = 0;
-let cscore = 0;
-
 // Randomizing computer's hand 
 function computerPlay() {
     let choice = ["rock", "paper", "scissors"];
@@ -16,7 +12,7 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) { 
     
     if (playerSelection === computerSelection) {
-        return result = "It's a Tie!";
+        return "It's a Tie!";
 
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         return "You Lose! Paper beats Rock!";
