@@ -1,5 +1,5 @@
-// Backend for rock paper scissors game
-/////////////////////////////////////////
+// Backend for rock paper scissors game //
+//////////////////////////////////////////
 
 // Randomizing computer's hand 
 function computerPlay() {
@@ -39,8 +39,9 @@ function playRound(playerSelection, computerSelection) {
 // Introducing scores 
 let currentpscore = 0;
 let currentcscore = 0;
-
+const total = currentpscore + currentcscore;
 // Adding DOM element 
+
 let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -59,14 +60,37 @@ buttons.forEach((button) => {
         }
         console.log(currentpscore);
         console.log(currentcscore);
+        console.log(currentpscore + currentcscore);
         
-        
+        // Replacing HTML element to display score & results 
         document.getElementById("pscore").innerHTML = currentpscore;
         document.getElementById("cscore").innerHTML = currentcscore;
-        document.getElementById("results").innerHTML = results;
-        
+        document.getElementById("results").innerHTML = results; 
+
+        if (currentpscore + currentcscore === 5) {
+            if (currentpscore === currentcscore) {
+                alert("It\'s a draw!!");
+                currentpscore = 0, currentcscore = 0;
+                document.getElementById("pscore").innerHTML = currentpscore;
+                document.getElementById("cscore").innerHTML = currentcscore;
+                document.getElementById("results").innerHTML = ""; 
+            } else if (currentcscore > currentpscore) {
+                alert("You Lose!")
+                currentpscore = 0, currentcscore = 0;
+                document.getElementById("pscore").innerHTML = currentpscore;
+                document.getElementById("cscore").innerHTML = currentcscore;
+                document.getElementById("results").innerHTML = ""; 
+            } else {
+                alert("You Win!")
+                currentpscore = 0, currentcscore = 0;
+                document.getElementById("pscore").innerHTML = currentpscore;
+                document.getElementById("cscore").innerHTML = currentcscore;
+                document.getElementById("results").innerHTML = ""; 
+            }
+        }
     })
 })
+
 
 
 
