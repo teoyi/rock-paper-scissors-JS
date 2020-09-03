@@ -34,14 +34,9 @@ function playRound(playerSelection, computerSelection) {
 
     };
 };
+//for (let step=0; step < 5; step++) {
 
-function game(playerSelection, computerSelection) {
-    for (let step=0; step < 5; step++) {
-        results = playRound(playerSelection, computerSelection);
-    }
-}
-
-// Getting score from html body 
+// Introducing scores 
 let currentpscore = 0;
 let currentcscore = 0;
 
@@ -52,10 +47,7 @@ buttons.forEach((button) => {
         playerSelection = button.id;
         console.log(playerSelection);
         let computerSelection = computerPlay();
-        game(playerSelection, computerSelection);
-
-        // let results = playRound(playerSelection, computerSelection);
-        // console.log(results[4])
+        let results = playRound(playerSelection, computerSelection);
 
         // Embedding results into numerical value 
         if (results === "It\'s a Tie!") {
@@ -65,8 +57,13 @@ buttons.forEach((button) => {
         } else if (results[4] === "L") {
             currentcscore++;
         }
-        console.log(currentcscore);
         console.log(currentpscore);
+        console.log(currentcscore);
+        
+        
+        document.getElementById("pscore").innerHTML = currentpscore;
+        document.getElementById("cscore").innerHTML = currentcscore;
+        
     })
 })
 
