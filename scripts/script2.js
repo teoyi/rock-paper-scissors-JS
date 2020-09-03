@@ -35,25 +35,45 @@ function playRound(playerSelection, computerSelection) {
     };
 };
 
-const buttons = document.querySelectorAll('button');
+function game(playerSelection, computerSelection) {
+    for (let step=0; step < 5; step++) {
+        results = playRound(playerSelection, computerSelection);
+    }
+}
+
+// Getting score from html body 
+let currentpscore = 0;
+let currentcscore = 0;
+
+// Adding DOM element 
+let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        alert(button.id);
-    });
-});
+        playerSelection = button.id;
+        console.log(playerSelection);
+        let computerSelection = computerPlay();
+        game(playerSelection, computerSelection);
 
-// // Actual Game 
-// function game() {
+        // let results = playRound(playerSelection, computerSelection);
+        // console.log(results[4])
+
+        // Embedding results into numerical value 
+        if (results === "It\'s a Tie!") {
+            currentpscore+0;
+        } else if (results[4] === "W") {
+            currentpscore++;
+        } else if (results[4] === "L") {
+            currentcscore++;
+        }
+        console.log(currentcscore);
+        console.log(currentpscore);
+    })
+})
+
+
+
+
 //     //for (let step = 0; step < 5; step++){
+    
 
-//         // Setting variables of player's and computer's hand
-//         let computerSelection = computerPlay();
-//         let buttons = document.querySelectorAll('button');
-//         buttons.forEach((button) => {
-//             button.addEventListener('click', () => {
-//                 alert(button.id);
-//             })
-//         })
-// }
 
-// game();
