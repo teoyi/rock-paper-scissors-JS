@@ -63,6 +63,7 @@ buttons.forEach((button) => {
         
         document.getElementById("pscore").innerHTML = currentpscore;
         document.getElementById("cscore").innerHTML = currentcscore;
+        document.getElementById("results").innerHTML = results;
         
     })
 })

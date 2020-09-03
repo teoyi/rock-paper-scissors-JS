@@ -18,46 +18,62 @@ body{
     font-size: 15px;
 }
 
-.contain {
+.subcontain {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: 120px;
-    margin-right: 120px;
+    justify-content: space-evenly;
+    margin-left: 140px;
+    margin-right: 140px;
     background: white;
     border-radius: 14px;
     margin-top: 0px;
     
 }
 
+.main {
+    display: flex; 
+    flex-direction: column;
+    background: white;
+    margin-left: 160px;
+    margin-right: 160px;
+    background: white;
+    border-radius: 14px;
+    padding-bottom: 20px;
+}
+#results { 
+    margin-top: 10px;
+    font-size: 30px;
+    
+}
 .user {
     display: flex; 
     flex-direction: column;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 20px;
 }
 
 .sep {
     font-size: 80px;
-    margin-top: 110px;
+    margin-top: 82px;
+
 }
 
 .computer {
     display: flex; 
     flex-direction: column;
     text-align: center;
-    font-size: 20px;
+    font-size: 16px;
     margin-top: 20px;
 }
 
 #pscore{
-    font-size: 100px;
+    font-size: 80px;
     margin-top: 0px;
 }
 
 #cscore {
-    font-size: 100px;
+    font-size: 80px;
     margin-top: 0px;
 }
 .results {
