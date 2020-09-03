@@ -40,8 +40,16 @@ function playRound(playerSelection, computerSelection) {
 let currentpscore = 0;
 let currentcscore = 0;
 const total = currentpscore + currentcscore;
-// Adding DOM element 
 
+// Reset function 
+function reset() {
+    currentpscore = 0, currentcscore = 0;
+    document.getElementById("pscore").innerHTML = currentpscore;
+    document.getElementById("cscore").innerHTML = currentcscore;
+    document.getElementById("results").innerHTML = ""; 
+}
+
+// Adding DOM element 
 let buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
@@ -67,25 +75,17 @@ buttons.forEach((button) => {
         document.getElementById("cscore").innerHTML = currentcscore;
         document.getElementById("results").innerHTML = results; 
 
+        // Reset conditions
         if (currentpscore + currentcscore === 5) {
             if (currentpscore === currentcscore) {
                 alert("It\'s a draw!!");
-                currentpscore = 0, currentcscore = 0;
-                document.getElementById("pscore").innerHTML = currentpscore;
-                document.getElementById("cscore").innerHTML = currentcscore;
-                document.getElementById("results").innerHTML = ""; 
+                reset();
             } else if (currentcscore > currentpscore) {
                 alert("You Lose!")
-                currentpscore = 0, currentcscore = 0;
-                document.getElementById("pscore").innerHTML = currentpscore;
-                document.getElementById("cscore").innerHTML = currentcscore;
-                document.getElementById("results").innerHTML = ""; 
+                reset();
             } else {
                 alert("You Win!")
-                currentpscore = 0, currentcscore = 0;
-                document.getElementById("pscore").innerHTML = currentpscore;
-                document.getElementById("cscore").innerHTML = currentcscore;
-                document.getElementById("results").innerHTML = ""; 
+                reset();
             }
         }
     })
